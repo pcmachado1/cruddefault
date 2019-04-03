@@ -1,0 +1,22 @@
+<?php
+
+include '../config.php';
+
+$usuario = new Usuario();
+
+$conexao = new ConectionFactory();
+
+$query = new Queryes();
+
+$usuario->setId($_POST['id']);
+
+try {
+    $result = $conexao->getConectionLocal()->query($query->deletarUsuario($usuario));
+    
+    $result->fetchAll();
+    
+} catch (PDOException $exc) {
+    
+    echo $exc->getMessage();
+    
+}
