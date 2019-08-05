@@ -14,7 +14,7 @@ $conexao = new ConectionFactory();
 $query = new Queryes();
 
 try {
-    $result = $conexao->getConectionLocal()->query($query->atualizarPerfil($usuario));
+    $result = $conexao->getConectionSqlServer()->query($query->atualizarPerfil($usuario));
     
     $result->fetchAll();
     

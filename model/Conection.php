@@ -19,7 +19,7 @@ class Conection{
 
         
     }
-    public function getConectionLocal() {
+    public function getConectionMysql() {
         
          try {
             $this->con = new PDO('mysql:host=localhost:3306;dbname=cruddefault;','root','NOVASENHA');
@@ -41,6 +41,16 @@ class Conection{
             echo "Erro ".$e->getMessage();
         }
         
+    }
+    public function getConectionSqlServer(){
+        try {
+            
+            $this->con = new PDO('sqlsrv:Server=PAULOMACHADO-PC\SQLEXPRESS;Database=sistema;','deus','J@mes912');
+            return $this->con;
+            
+        } catch (PDOException $e) {
+            echo "Erro ".$e->getMessage();
+        }
     }
     
     

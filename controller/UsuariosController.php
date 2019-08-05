@@ -13,7 +13,7 @@ $conexao = new ConectionFactory();
 
 try {
     
-    $result = $conexao->getConectionLocal()->query($query->listarUsuariosSimples());
+    $result = $conexao->getConectionSqlServer()->query($query->listarUsuariosSimples());
     echo json_encode($result->fetchAll());
     
 } catch (PDOException $exc) {

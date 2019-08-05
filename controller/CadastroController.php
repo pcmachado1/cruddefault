@@ -12,7 +12,7 @@ $conexao = new ConectionFactory();
 $query = new Queryes();
 
 try {
-    $result = $conexao->getConectionLocal()->query($query->novoCadastro($usuario));
+    $result = $conexao->getConectionSqlServer()->query($query->novoCadastro($usuario));
     
     $result->fetchAll();
     

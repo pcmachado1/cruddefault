@@ -5,7 +5,7 @@
     switch ($_GET['page']) 
     {
         case '':
-            
+           
             include 'view/header.html';
             include 'view/usuarios.html';
             include 'view/footer.html';
