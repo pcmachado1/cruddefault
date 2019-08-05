@@ -42,6 +42,16 @@ class Conection{
         }
         
     }
+    public function getConectionSqlServer(){
+        try {
+            
+            $this->con = new PDO('sqlsrv:Server=PAULOMACHADO-PC\SQLEXPRESS;Database=sistema;','deus','J@mes912');
+            return $this->con;
+            
+        } catch (PDOException $e) {
+            echo "Erro ".$e->getMessage();
+        }
+    }
     
     
 
