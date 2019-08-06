@@ -30,6 +30,16 @@ class Conection{
         }
         
     }
+    public function getConectionPostgresql(){
+            //pgsql:host=localhost;port=5432;dbname=pagila;user=postgres;password=postgres
+        try {
+            $this->con = new PDO('pgsql:host=localhost;port=5432;dbname=sistema;','postgres','12345678');
+            return $this->con;
+            
+        } catch (PDOException $e) {
+            echo "Erro ".$e->getMessage();
+        }
+    }
     public function getConectionRemote() {
         
          try {

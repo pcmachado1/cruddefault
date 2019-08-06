@@ -14,7 +14,7 @@ $conexao = new ConectionFactory();
 $query = new Queryes();
 
 try {
-    $result = $conexao->getConectionSqlServer()->query($query->atualizarPerfil($usuario));
+    $result = $conexao->getConectionPostgresql()->query($query->atualizarPerfil($usuario));
     
     $result->fetchAll();
     

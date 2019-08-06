@@ -11,7 +11,7 @@ $query = new Queryes();
 $usuario->setId($_POST['id']);
 
 try {
-    $result = $conexao->getConectionLocal()->query($query->deletarUsuario($usuario));
+    $result = $conexao->getConectionPostgresql()->query($query->deletarUsuario($usuario));
     
     $result->fetchAll();
     

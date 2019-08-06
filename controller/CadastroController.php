@@ -12,7 +12,7 @@ $conexao = new ConectionFactory();
 $query = new Queryes();
 
 try {
-    $result = $conexao->getConectionSqlServer()->query($query->novoCadastro($usuario));
+    $result = $conexao->getConectionPostgresql()->query($query->novoCadastro($usuario));
     
     $result->fetchAll();
     
