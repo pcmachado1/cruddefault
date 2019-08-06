@@ -70,6 +70,7 @@ function deletarUsuario(idDoUsuario){
 }
 function loadUsers(){
     $.post('../cruddefault/controller/UsuariosController.php',{},function(data){
+        console.log(data);
         var jsonObject = JSON.parse(data);
         for(i=0;i<jsonObject.length;i++){
             
